@@ -6,7 +6,6 @@ export default function GameArtwork({ game }) {
         {game.name}
         <span>™</span>
       </div>
-
       <div className="window-scene" aria-hidden="true">
         <div className="window-moon" />
         <div className="window-building building-a" />
@@ -15,7 +14,6 @@ export default function GameArtwork({ game }) {
         <div className="window-floor" />
         <div className="window-plant">♣</div>
       </div>
-
       <p className="game-art-label">
         {game.shortDescription || game.description}
       </p>
