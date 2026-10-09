@@ -15,25 +15,32 @@ export default function GameDetailPage() {
 
   return (
     <main className="inner-page game-detail">
-      <Link className="back-link" to="/games">
-        ← ALL GAMES
-      </Link>
+      <Link className="back-link" to="/games">← ALL GAMES</Link>
 
       <GameArtwork game={game} />
       <Eyebrow>{game.status}</Eyebrow>
       <h1>{game.name}</h1>
       <p className="inner-intro">{game.description}</p>
 
-      <div className="game-tags">
-        {game.genre.map((tag) => (
-          <span key={tag}>{tag}</span>
-        ))}
-      </div>
+      <section className="game-metadata">
+        <div className="metadata-group">
+          <h2>PLATFORMS</h2>
+          <div className="platform-list platform-list--detail">
+            {(game.platforms || []).map((platform) => (
+              <span className="platform-badge" key={platform}>{platform}</span>
+            ))}
+          </div>
+        </div>
 
-      <p className="detail-note">
-        {game.tagline || "More details coming soon."}
-      </p>
+        <div className="metadata-group">
+          <h2>GENRES</h2>
+          <div className="game-tags">
+            {game.genre.map((tag) => <span key={tag}>{tag}</span>)}
+          </div>
+        </div>
+      </section>
 
+      <p className="detail-note">{game.tagline || "More details coming soon."}</p>
       <Link className="button button-dark" to="/contact">
         ASK US ABOUT {game.name.toUpperCase()}
         <ArrowUpRight size={16} aria-hidden="true" />
