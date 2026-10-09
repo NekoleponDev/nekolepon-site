@@ -1,0 +1,1 @@
+import {Link} from "react-router-dom"; export default function Brand(){return <Link className="brand" to="/" aria-label="Nekolepon home"><img className="brand-wordmark" src="/nekolepon-wordmark.svg" alt="Nekolepon"/></Link>;}
