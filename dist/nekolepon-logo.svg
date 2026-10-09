@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+<rect width="600" height="420" fill="#fffdf6"/>
+<g transform="translate(115 20)">
+<path d="M74 118 58 26 125 73Q174 48 220 72L286 27 276 122Q298 161 280 207 260 269 177 270 91 271 65 214 48 171 74 118Z" fill="#79a849" stroke="#79a849" stroke-width="5" stroke-linejoin="round"/>
+<path d="M83 70 70 40 105 75Z M255 71 276 40 267 82Z" fill="#f1ad91"/>
+<path d="M85 127Q118 90 158 116L180 172Q137 205 92 177Z M183 116Q222 91 250 128L257 177Q220 204 187 173Z" fill="#fffdf6"/>
+<path d="M116 143q15-15 29 0m67 0q15-15 29 0" fill="none" stroke="#503323" stroke-width="9" stroke-linecap="round"/>
+<path d="M160 167q11 14 22 0m-20 0q-4 14-17 7m37-7q4 14 17 7" fill="none" stroke="#503323" stroke-width="7" stroke-linecap="round"/>
+<path d="M93 190 74 183m22 22-24-1m167-9 21-9m-22 28 23 2" stroke="#503323" stroke-width="7" stroke-linecap="round"/>
+<path d="M89 209Q112 190 140 215L151 243Q120 260 94 239Z M178 215Q208 190 233 210L239 240Q211 259 181 243Z" fill="#fffdf6"/>
+<path d="M100 222v12m15-11v13m83-13v13m15-14v13" stroke="#edcfb0" stroke-width="6" stroke-linecap="round"/>
+<path d="M277 199q33-27 45 2 10 28-24 48-17 13-36 17" fill="none" stroke="#79a849" stroke-width="26" stroke-linecap="round"/>
+<path d="M291 202l13 12m-20 7 14 13" stroke="#fffdf6" stroke-width="7" stroke-linecap="round"/>
+<path d="M43 111l-20-23m17 52-29-6" stroke="#79a849" stroke-width="13" stroke-linecap="round"/>
+<g fill="#fffdf6" stroke="#fffdf6" stroke-width="8" stroke-linecap="round"><path d="M130 96l13 9m27-6 14 12m23-26 14-3m-89 45-10 10m58 14 14-8m36 1 11 11m-113 42 9 15m67 1 8 10m62-48 7 15"/></g>
+</g>
+<g fill="#503323" font-family="Arial Rounded MT Bold, Trebuchet MS, sans-serif" font-size="70" font-weight="800" letter-spacing="-4"><text x="30" y="367">nekolep</text><text x="442" y="367">n</text></g>
+<g transform="translate(431 316)"><circle cx="35" cy="17" r="29" fill="#79a849"/><path d="M35-10q0-15 18-19-1 16-18 19" fill="#79a849"/><path d="M23 9l7 6m11-10 7 6m-19 10 7 6" stroke="#fffdf6" stroke-width="5" stroke-linecap="round"/></g>
+</svg>
