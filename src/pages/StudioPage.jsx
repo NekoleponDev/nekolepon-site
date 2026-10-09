@@ -1,1 +1,29 @@
-import Eyebrow from "../components/Eyebrow.jsx";import Recipe from "../components/Recipe.jsx";import ContactBand from "../components/ContactBand.jsx";export default function StudioPage(){return <main><section className="inner-page studio-page"><Eyebrow>SMALL STUDIO, BIG FEELINGS</Eyebrow><h1>Soft edges.<br/><span>Big ideas.</span></h1><p className="inner-intro">Nekolepon is an independent game studio from Indonesia, inspired by the curious spirit of cats and the sweet little surprise of klepon.</p><p className="inner-copy">We make games that are playful and profound, weird and wonderful. We care about the tiny details, the moments between the big moments, and stories that follow you long after you put the controller down.</p><Recipe/></section><ContactBand/></main>;}
+import ContactBand from "../components/ContactBand.jsx";
+import Eyebrow from "../components/Eyebrow.jsx";
+import Recipe from "../components/Recipe.jsx";
+
+export default function StudioPage() {
+  return (
+    <main>
+      <section className="inner-page studio-page">
+        <Eyebrow>SMALL STUDIO, BIG FEELINGS</Eyebrow>
+        <h1>
+          Soft edges.
+          <br />
+          <span>Big ideas.</span>
+        </h1>
+        <p className="inner-intro">
+          Nekolepon is an independent game studio from Indonesia, inspired by
+          the curious spirit of cats and the sweet little surprise of klepon.
+        </p>
+        <p className="inner-copy">
+          We make games that are playful and profound, weird and wonderful. We
+          care about the tiny details, the moments between the big moments, and
+          stories that follow you long after you put the controller down.
+        </p>
+        <Recipe />
+      </section>
+      <ContactBand />
+    </main>
+  );
+}
