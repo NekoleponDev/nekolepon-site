@@ -359,3 +359,28 @@ body { font-size:var(--font-body); }
 .ticker:hover .ticker-track { animation-play-state:paused; }
 @media(max-width:680px) { .ticker-track { animation-duration:19s; } .ticker-group { font-size:12px; padding-right:12px; } .ticker-group b { margin:0 14px; } }
 @media(prefers-reduced-motion:reduce) { .ticker-track { animation:none!important; } }
+
+/* Use separate mascot and wordmark assets; keep spacing intentional. */
+.brand { width:clamp(150px,17vw,205px); height:58px; overflow:visible; flex:0 0 auto; }
+.brand .brand-wordmark { display:block; width:100%; height:auto; max-height:50px; object-fit:contain; object-position:left center; }
+.hero-mascot { width:88%; height:86%; left:6%; top:7%; object-fit:contain; mix-blend-mode:normal; }
+.art-topline { letter-spacing:.12em; }
+.art-caption { gap:13px; line-height:1.65; }
+.hero-description { max-width:390px; }
+.hero-actions { column-gap:28px; row-gap:16px; }
+.nav-links { gap:clamp(25px,3.5vw,48px); }
+.nav-links > a:not(.nav-cta) { letter-spacing:0; }
+.game-tags { gap:8px; }
+.game-tags span { padding:8px 10px; letter-spacing:.035em; }
+.ticker-track { animation: ticker-loop 22s linear infinite; }
+.ticker-group { padding-right:0; }
+.ticker-group b { margin:0 26px; }
+@keyframes ticker-loop { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+@media(max-width:680px) {
+ .brand { width:146px; height:48px; }
+ .brand .brand-wordmark { max-height:43px; }
+ .hero-mascot { width:94%; height:89%; left:3%; top:5%; }
+ .art-caption { gap:9px; font-size:8px; }
+ .ticker-track { animation-duration:18s; }
+ .ticker-group b { margin:0 15px; }
+}
