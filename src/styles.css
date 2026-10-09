@@ -350,16 +350,6 @@ body { font-size:var(--font-body); }
 }
 @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
 
-/* Seamless marquee: two identical groups travel by exactly one group width. */
-.ticker { display:block; width:100%; overflow:hidden; white-space:nowrap; }
-.ticker-track { display:flex; width:max-content; max-width:none; animation: ticker-loop 24s linear infinite; will-change:transform; }
-.ticker-group { display:flex; flex:0 0 auto; align-items:center; width:max-content; white-space:nowrap; padding-right:24px; font-size:13px; font-weight:700; letter-spacing:.045em; }
-.ticker-group b { flex:0 0 auto; font-size:18px; font-weight:400; margin:0 23px; vertical-align:baseline; }
-@keyframes ticker-loop { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
-.ticker:hover .ticker-track { animation-play-state:paused; }
-@media(max-width:680px) { .ticker-track { animation-duration:19s; } .ticker-group { font-size:12px; padding-right:12px; } .ticker-group b { margin:0 14px; } }
-@media(prefers-reduced-motion:reduce) { .ticker-track { animation:none!important; } }
-
 /* Use separate mascot and wordmark assets; keep spacing intentional. */
 .brand { width:clamp(150px,17vw,205px); height:58px; overflow:visible; flex:0 0 auto; }
 .brand .brand-wordmark { display:block; width:100%; height:auto; max-height:50px; object-fit:contain; object-position:left center; }
@@ -372,15 +362,17 @@ body { font-size:var(--font-body); }
 .nav-links > a:not(.nav-cta) { letter-spacing:0; }
 .game-tags { gap:8px; }
 .game-tags span { padding:8px 10px; letter-spacing:.035em; }
-.ticker-track { animation: ticker-loop 22s linear infinite; }
-.ticker-group { padding-right:0; }
-.ticker-group b { margin:0 26px; }
-@keyframes ticker-loop { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+/* Continuous marquee: six identical groups ensure the viewport is always filled. */
+.ticker { position:relative; display:block; width:100%; overflow:hidden; white-space:nowrap; }
+.ticker-track { display:flex; align-items:center; width:max-content; max-width:none; animation:ticker-loop 28s linear infinite; transform:translate3d(0,0,0); will-change:transform; backface-visibility:hidden; }
+.ticker-group { display:flex; flex:0 0 auto; align-items:center; width:max-content; white-space:nowrap; padding:13px 0; font-size:13px; font-weight:700; line-height:1; letter-spacing:.045em; }
+.ticker-group b { flex:0 0 auto; margin:0 26px; font-size:18px; font-weight:400; line-height:1; }
+@keyframes ticker-loop { from { transform:translate3d(0,0,0); } to { transform:translate3d(-16.6666667%,0,0); } }
+.ticker:hover .ticker-track { animation-play-state:paused; }
 @media(max-width:680px) {
- .brand { width:146px; height:48px; }
- .brand .brand-wordmark { max-height:43px; }
- .hero-mascot { width:94%; height:89%; left:3%; top:5%; }
- .art-caption { gap:9px; font-size:8px; }
- .ticker-track { animation-duration:18s; }
- .ticker-group b { margin:0 15px; }
+ .ticker-track { animation-duration:22s; }
+ .ticker-group { padding:12px 0; font-size:12px; }
+ .ticker-group b { margin:0 15px; font-size:16px; }
 }
+@media(prefers-reduced-motion:reduce) { .ticker-track { animation:none!important; } }
