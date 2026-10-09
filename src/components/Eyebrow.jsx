@@ -1,0 +1,1 @@
+export default function Eyebrow({children}){return <div className="eyebrow"><span className="eyebrow-icon">✳</span>{children}</div>;}
