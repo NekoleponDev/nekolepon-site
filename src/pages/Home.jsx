@@ -11,7 +11,7 @@ import GameCard from "../components/GameCard.jsx";
 import MascotArt from "../components/MascotArt.jsx";
 import Recipe from "../components/Recipe.jsx";
 import Ticker from "../components/Ticker.jsx";
-import games, { getFeaturedGames } from "../data/games.js";
+import { getFeaturedGames } from "../data/games.js";
 
 function GamesSection() {
   const featuredGames = getFeaturedGames();
