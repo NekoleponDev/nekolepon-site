@@ -13,28 +13,36 @@ React + Vite multi-page website with Tailwind CSS, reusable components, and resp
 - `tailwind.config.js` — Tailwind theme
 - `postcss.config.js` — Tailwind/PostCSS integration
 
-## Add a game
+## Add a game, cover images, and platforms
 
-Add one object to the `games` array in `src/data/games.js`:
+1. Add your game images inside `public/games/<slug>/`. For example:
+   - `public/games/hening/cover.webp` — detail-page cover
+   - `public/games/hening/card.webp` — optional image for the catalogue card
+2. Reference them in `src/data/games.js` using public-root paths:
+   - `coverImage: "/games/hening/cover.webp"`
+   - `cardImage: "/games/hening/card.webp"`
+3. Set `platforms` to an array. Available labels can include `"PC"`, `"Steam"`, `"PlayStation 5"`, `"Xbox Series X|S"`, `"Nintendo Switch"`, `"Nintendo Switch 2"`, `"iOS"`, and `"Android"`. Only list platforms that are planned or confirmed for that game.
+4. Add the game to the `games` array:
 
 ```js
 {
   slug: "new-game",
   name: "New Game",
   status: "IN DEVELOPMENT",
-  platform: "PC",
+  platforms: ["PC", "Steam", "PlayStation 5"],
   genre: ["ADVENTURE", "NARRATIVE"],
   description: "Full game description.",
-  shortDescription: "Short card and artwork description.",
-  tagline: "A short line for the game detail page.",
-  featured: true,
-  artwork: "window"
+  shortDescription: "Short description for the game card.",
+  tagline: "A short line for the detail page.",
+  coverImage: "/games/new-game/cover.webp",
+  cardImage: "/games/new-game/card.webp",
+  featured: true
 }
 ```
 
-Use a unique, URL-friendly `slug`. The game automatically appears on the Games page, gets a detail route at `/games/new-game`, and appears on the homepage when `featured` is `true`. Set `featured: false` to keep it in the catalogue only.
+Use a unique URL-friendly `slug`. The game automatically appears on the Games page, gets a detail route at `/games/new-game`, and appears on the homepage when `featured` is `true`. The cover image is displayed on the game card and detail page; if an image path is not supplied, the designed fallback artwork is used.
 
-This is a static-site content workflow: adding or editing games requires a Git commit and a Vercel deployment. A live admin dashboard that saves content without a deployment needs a CMS or database and authentication.
+This catalogue is data-driven but stored in the repository: changes require a Git commit and Vercel deployment. It does not yet include a browser-based admin upload form. To manage games and upload images without editing code, connect a CMS such as Sanity, Strapi, or another authenticated content backend.
 
 ## Development
 
