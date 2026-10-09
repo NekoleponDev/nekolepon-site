@@ -224,3 +224,37 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
 }
+
+/* React multi-page additions */
+.brand { width: 190px; height: 54px; display:flex; align-items:center; overflow:hidden; }
+.brand img { width:100%; height:100%; object-fit:contain; object-position:left center; display:block; }
+.hero-mascot { position:absolute; z-index:3; width:88%; height:85%; left:6%; top:8%; object-fit:contain; mix-blend-mode:multiply; }
+.menu-toggle { align-items:center; justify-content:center; }
+.menu-toggle svg { width:21px; height:21px; }
+.hero-bottom span { display:flex; align-items:center; gap:8px; }
+.nav-links a.active { text-decoration:underline; text-underline-offset:5px; }
+.inner-page { min-height:60vh; padding:100px 7.8% 115px; }
+.inner-page h1 { margin:30px 0 24px; font-size:clamp(62px,9vw,112px); line-height:.93; letter-spacing:-.085em; }
+.inner-page h1 span { color:var(--green-dark); }
+.inner-intro { max-width:650px; color:#55594f; font-size:17px; line-height:1.85; }
+.inner-copy { max-width:620px; color:#606358; font-size:14px; line-height:1.95; margin-top:25px; }
+.inner-games { margin-top:55px; }
+.inner-page .game-art { max-width:650px; margin:38px 0 28px; }
+.game-detail { max-width:1000px; }
+.game-detail h1 span { font-size:.3em; vertical-align:top; color:var(--ink); }
+.back-link { display:inline-block; margin-bottom:20px; font:10px var(--mono); border-bottom:1px solid var(--ink); padding-bottom:7px; }
+.detail-note,.contact-small { font:9px var(--mono); letter-spacing:.08em; color:#77796e; margin:30px 0; }
+.studio-page { display:grid; grid-template-columns:1.2fr .8fr; column-gap:8%; align-items:start; }
+.studio-page > .eyebrow,.studio-page > h1,.studio-page > .inner-intro,.studio-page > .inner-copy { grid-column:1; }
+.studio-page .about-aside { grid-column:2; grid-row:1 / span 4; margin-top:40px; }
+.contact-page { min-height:65vh; }
+.email-button { margin-top:24px; }
+@media(max-width:680px) {
+  .brand { width:155px; height:48px; }
+  .inner-page { padding:72px 6% 85px; }
+  .inner-page h1 { font-size:clamp(59px,14vw,85px); }
+  .inner-intro { font-size:14px; }
+  .studio-page { display:block; }
+  .studio-page .about-aside { margin-top:45px; }
+  .inner-page .game-art { aspect-ratio:1.05; }
+}
