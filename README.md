@@ -1,38 +1,23 @@
 # Nekolepon Studio Website
 
-A responsive, single-page studio website built with plain HTML, CSS, and JavaScript. No build step or framework dependency is required.
+React + Vite multi-page website using React Router. The neo-brutalist direction keeps the warm paper background, green klepon accents, bold type, crisp borders, and hard shadows.
 
-## Run locally
+## Pages
+- / — Home
+- /games — Game catalog
+- /games/hening — Hening details
+- /studio — Studio profile
+- /contact — Contact
 
-Open `index.html` in a browser, or run a local static server from this directory:
-
+## Develop
 ```bash
-python -m http.server 3000
-```
+npm install
+npm run dev
+npm run build
+``
 
-Then visit http://localhost:3000.
+## Vercel
+Import this repository. Use build command `npm run build` and output directory `dist`. `vercel.json` rewrites direct page requests to the React entrypoint.
 
-## Deploy to Vercel
-
-1. Sign in to Vercel and choose **Add New → Project**.
-2. Import `NekoleponDev/nekolepon-site` from GitHub.
-3. Keep the project root as `./`.
-4. Select **Other** as the framework preset if Vercel asks.
-5. Leave the Build Command and Output Directory empty; the site is static and `index.html` is at the repository root.
-6. Select **Deploy**.
-
-New commits to the configured production branch will trigger deployments automatically after the project is connected.
-
-## Before launch
-
-- Update the `hello@nekolepon.com` email address in `index.html` if another contact address should be used.
-- Replace the Hening project details and availability when you have confirmed public information.
-- Add real social links when the studio accounts are ready.
-
-## Files
-
-- `index.html` — page content and inline SVG illustrations
-- `styles.css` — responsive neo-brutalist design
-- `script.js` — accessible mobile navigation
-- `favicon.svg` — custom cat mark
-- `vercel.json` — static deployment settings and response headers
+## Logo asset
+Place the supplied cat + klepon wordmark image at `public/nekolepon-logo.png`. Header and mascot references already use this path.
