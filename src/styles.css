@@ -376,3 +376,25 @@ body { font-size:var(--font-body); }
  .ticker-group b { margin:0 15px; font-size:16px; }
 }
 @media(prefers-reduced-motion:reduce) { .ticker-track { animation:none!important; } }
+
+/* Recipe card: keep labels, titles, and descriptions on separate lines. */
+.about-aside { padding:clamp(22px,3vw,32px); min-width:0; }
+.about-aside > span { padding-bottom:20px; margin-bottom:4px; }
+.recipe-item { grid-template-columns:36px minmax(0,1fr); gap:16px; padding:22px 0; min-width:0; }
+.recipe-item > span { display:flex; flex-direction:column; align-items:flex-start; gap:7px; min-width:0; line-height:1.35; }
+.recipe-item small { display:block; margin-top:0; font-size:9px; line-height:1.6; letter-spacing:.075em; overflow-wrap:anywhere; }
+.recipe-item b { padding-top:3px; }
+.aside-doodle { margin-top:26px; display:flex; flex-direction:column; align-items:flex-end; gap:12px; line-height:1; }
+.aside-doodle span { display:block; line-height:1; }
+@media(max-width:900px) {
+ .about-aside { padding:24px; }
+ .recipe-item { gap:13px; padding:19px 0; }
+}
+@media(max-width:680px) {
+ .about-aside { padding:22px 20px; }
+ .about-aside > span { padding-bottom:17px; }
+ .recipe-item { grid-template-columns:30px minmax(0,1fr); gap:12px; padding:18px 0; }
+ .recipe-item > span { gap:6px; }
+ .recipe-item small { font-size:8px; letter-spacing:.06em; line-height:1.55; }
+ .aside-doodle { margin-top:22px; gap:10px; }
+}
