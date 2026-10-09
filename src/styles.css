@@ -258,3 +258,94 @@ button { font: inherit; }
   .studio-page .about-aside { margin-top:45px; }
   .inner-page .game-art { aspect-ratio:1.05; }
 }
+
+/* Refined joyful studio system */
+:root { --font-body: 14px; --font-small: 10px; --font-label: 11px; --font-display: clamp(48px, 6.2vw, 78px); }
+body { font-size:var(--font-body); }
+.announcement { min-height:34px; font-size:9px; }
+.site-header { position:sticky; top:0; z-index:50; height:82px; box-shadow:0 1px 0 rgba(32,35,31,.04); }
+.brand { width:178px; height:64px; }
+.brand img { object-fit:contain; object-position:left center; }
+.nav-links { gap:clamp(24px,3.3vw,46px); }
+.nav-links > a:not(.nav-cta) { position:relative; font-family:var(--sans); font-size:13px; font-weight:600; letter-spacing:-.02em; text-transform:none; padding:9px 0; }
+.nav-links > a:not(.nav-cta) span { display:none; }
+.nav-links > a:not(.nav-cta)::after { content:""; position:absolute; height:3px; left:0; right:100%; bottom:0; background:var(--orange); transition:right .2s ease; }
+.nav-links > a:not(.nav-cta):hover::after,.nav-links > a.active::after { right:0; }
+.nav-cta { min-height:43px; padding:0 15px; gap:15px; background:var(--orange); font:600 12px var(--sans); letter-spacing:0; }
+.hero { min-height:650px; padding-top:78px; padding-bottom:83px; }
+.hero h1 { font-size:clamp(68px,8.1vw,112px); }
+.hero-description,.about-copy,.game-info > p,.inner-intro,.inner-copy,.contact-bottom p { font-size:14px; }
+.hero-art { border-radius:3px; box-shadow:8px 8px 0 var(--ink); }
+.hero-mascot { width:95%; height:90%; left:2.5%; top:5%; object-fit:contain; }
+.sun-shape { background:#c7e99a; }
+.spark { animation:float-spark 4s ease-in-out infinite; }
+.spark-b { animation-delay:-1.7s; }
+.spark-c { animation-delay:-2.8s; }
+@keyframes float-spark { 0%,100% { transform:translateY(0) rotate(0deg); } 50% { transform:translateY(-8px) rotate(12deg); } }
+.button { border-radius:2px; font-family:var(--sans); font-weight:700; font-size:11px; letter-spacing:.015em; }
+.button-dark { background:var(--ink); }
+.button-light { background:var(--green); }
+.section { padding-top:112px; padding-bottom:112px; }
+.section-heading h2,.about-content h2,.contact-section h2 { font-size:var(--font-display); }
+.eyebrow { font-size:10px; font-weight:500; }
+.eyebrow-icon { background:var(--orange); width:24px; height:24px; }
+.ticker { padding:15px 0; }
+.ticker-track span { font-size:13px; letter-spacing:.045em; }
+.game-card { border-radius:3px; overflow:hidden; box-shadow:7px 7px 0 var(--ink); }
+.game-art { background:#dce4ca; }
+.game-info h3 { font-size:clamp(36px,4vw,48px); }
+.game-info-top,.game-tags span,.game-link,.game-art-label,.corner-number,.game-logo span { font-size:10px; }
+.pill { font-size:9px; font-weight:500; }
+.coming-soon { border-bottom:1px solid var(--line); }
+.coming-icon { background:var(--orange); }
+.about-section { padding-top:112px; padding-bottom:112px; }
+.about-content h2 { line-height:.99; }
+.about-aside { background:rgba(255,255,255,.035); padding:24px; border:1px solid #454941; }
+.recipe-item { font-size:14px; }
+.contact-section { position:relative; overflow:hidden; }
+.contact-section::after { content:"✳"; position:absolute; right:-25px; top:100px; font-size:clamp(160px,24vw,340px); line-height:1; color:rgba(32,35,31,.055); pointer-events:none; transform:rotate(-14deg); }
+.contact-section h2,.contact-top,.contact-bottom { position:relative; z-index:1; }
+.contact-button { background:var(--paper); color:var(--ink); }
+.site-footer { gap:24px; }
+.footer-note,.footer-links a,.copyright { font-size:9px; }
+.inner-page h1 { font-size:clamp(56px,7vw,92px); }
+.inner-page .game-card { margin-top:32px; }
+.inner-page .eyebrow { margin-bottom:4px; }
+.inner-page .about-aside { max-width:390px; }
+.menu-toggle { border-radius:2px; }
+@media(max-width:900px) {
+  .site-header { height:74px; }
+  .brand { width:155px; height:56px; }
+  .nav-links { gap:20px; }
+  .nav-links > a:not(.nav-cta) { font-size:12px; }
+  .hero { min-height:570px; }
+  .hero h1 { font-size:clamp(62px,8vw,84px); }
+}
+@media(max-width:680px) {
+  .announcement { min-height:30px; padding:7px 5%; font-size:8px; }
+  .announcement-right { font-size:7px; }
+  .site-header { height:70px; padding:0 5%; }
+  .brand { width:142px; height:52px; }
+  .menu-toggle { display:flex; width:42px; height:42px; padding:0; border:1.5px solid var(--ink); background:var(--green); box-shadow:3px 3px 0 var(--ink); }
+  .nav-links { padding:104px 8% 40px; }
+  .nav-links > a:not(.nav-cta) { font-size:24px; padding:22px 0; }
+  .nav-cta { font-size:13px; }
+  .hero { padding:48px 5% 80px; gap:29px; }
+  .hero h1 { font-size:clamp(62px,14.2vw,88px); }
+  .hero-description,.about-copy,.game-info > p,.inner-intro,.inner-copy,.contact-bottom p { font-size:13px; }
+  .hero-art { width:calc(100% - 7px); aspect-ratio:.92; border-radius:2px; }
+  .hero-bottom { font-size:8px; }
+  .section { padding:74px 5%; }
+  .section-heading h2,.about-content h2 { font-size:clamp(47px,11vw,65px); }
+  .game-card { box-shadow:5px 5px 0 var(--ink); }
+  .game-info { min-height:340px; }
+  .about-section { padding:76px 6%; gap:44px; }
+  .about-aside { padding:20px; }
+  .contact-section { padding:74px 6% 66px; }
+  .contact-section h2 { font-size:clamp(63px,13.5vw,90px); }
+  .site-footer { gap:16px; }
+  .footer-links { gap:12px; margin-left:0; flex-wrap:wrap; }
+  .footer-note { order:3; flex-basis:100%; }
+  .copyright { flex-basis:100%; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
