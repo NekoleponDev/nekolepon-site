@@ -1,1 +1,20 @@
-import {Link} from "react-router-dom";import {ArrowRight} from "lucide-react";import Eyebrow from "../components/Eyebrow.jsx";export default function NotFound(){return <main className="inner-page"><Eyebrow>404 / LOST IN THE GRASS</Eyebrow><h1>Oops, <span>meow?</span></h1><p className="inner-intro">Looks like this little world doesn't exist yet.</p><Link className="button button-dark" to="/">BACK HOME <ArrowRight size={16}/></Link></main>;}
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import Eyebrow from "../components/Eyebrow.jsx";
+
+export default function NotFound() {
+  return (
+    <main className="inner-page">
+      <Eyebrow>404 / LOST IN THE GRASS</Eyebrow>
+      <h1>
+        Oops, <span>meow?</span>
+      </h1>
+      <p className="inner-intro">
+        Looks like this little world doesn't exist yet.
+      </p>
+      <Link className="button button-dark" to="/">
+        BACK HOME <ArrowRight size={16} aria-hidden="true" />
+      </Link>
+    </main>
+  );
+}
