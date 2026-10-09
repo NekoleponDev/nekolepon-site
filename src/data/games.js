@@ -1,0 +1,1 @@
+const games=[{slug:"hening",name:"Hening",status:"IN DEVELOPMENT",platform:"PLATFORM TBA",genre:["NARRATIVE","PSYCHOLOGICAL","EXPLORATION"],description:"A psychological narrative game about grief, memory, and the quiet spaces that hold us together. Some stories don't end when the credits roll."}]; export default games;
