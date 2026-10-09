@@ -1,23 +1,28 @@
 # Nekolepon Studio Website
 
-React + Vite multi-page website using React Router. The neo-brutalist direction keeps the warm paper background, green klepon accents, bold type, crisp borders, and hard shadows.
+React + Vite multi-page site styled with Tailwind CSS and bespoke component styles for the neo-brutalist studio art direction.
 
-## Pages
-- / — Home
-- /games — Game catalog
-- /games/hening — Hening details
-- /studio — Studio profile
-- /contact — Contact
+## Structure
+- `src/main.jsx` — React entry point
+- `src/App.jsx` — routing and shared layout
+- `src/pages/` — Home, Games, Hening detail, Studio, Contact, and 404 pages
+- `src/components/` — reusable header, footer, mascot, ticker, game card, recipe, and contact components
+- `src/data/games.js` — game content
+- `src/index.css` — Tailwind directives, base styles, responsive theme and art-direction styles
+- `tailwind.config.js` — Tailwind content scanning, colors, and fonts
+- `postcss.config.js` — Tailwind/PostCSS pipeline
 
 ## Develop
 ```bash
 npm install
 npm run dev
+``
+
+## Production build
+```bash
 npm run build
+npm run preview
 ``
 
 ## Vercel
-Import this repository. Use build command `npm run build` and output directory `dist`. `vercel.json` rewrites direct page requests to the React entrypoint.
-
-## Logo asset
-Place the supplied cat + klepon wordmark image at `public/nekolepon-logo.png`. Header and mascot references already use this path.
+Build command: `npm run build`; output directory: `dist`. Vercel routing rewrites support direct links to React Router pages. The generated `dist/` folder is ignored by Git.
